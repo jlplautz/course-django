@@ -4,8 +4,7 @@ on: [pull_request]
 
 jobs:
   build:
-    env:
-      PIPENV_NO_INIHERIT: 1
+
     runs-on: ubuntu-latest
 
     steps:
