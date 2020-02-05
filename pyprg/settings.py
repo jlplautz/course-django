@@ -34,6 +34,9 @@ DEBUG = config('DEBUG', cast=bool)
 
 ALLOWED_HOSTS = config('ALLOWED_HOSTS', cast=Csv())
 
+# Como nao vamos usar USER patrao do Django precisamos informar ao framework
+# qual será a classe base utilizada como usuario
+AUTH_USER_MODEL = 'base.User'
 
 # Application definition
 
@@ -148,7 +151,7 @@ if AWS_ACCESS_KEY_ID:
     AWS_S3_OBJECT_PARAMETERS = {'CacheControl': 'max-age=86400', }
     AWS_PRELOAD_METADATA = True
     AWS_AUTO_CREATE_BUCKET = False
-    AWS_QUERYSTRING_AUTH = False
+    AWS_QUERYSTRING_AUTH = True
 
     COLLECTFAST_ENABLED = True
 
