@@ -145,9 +145,9 @@ if AWS_ACCESS_KEY_ID:
     AWS_S3_OBJECT_PARAMETERS = {'CacheControl': 'max-age=86400', }
     AWS_PRELOAD_METADATA = True
     AWS_AUTO_CREATE_BUCKET = False
-    AWS_QUERYSTRING_AUTH = True
+    AWS_QUERYSTRING_AUTH = False
 
-    AWS_DEFAULT_ACL = 'private'
+    AWS_DEFAULT_ACL = None
 
     # Static Assets
     # ===========================================================
