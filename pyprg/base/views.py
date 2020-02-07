@@ -1,8 +1,8 @@
-from django.http import HttpResponse
-
-
 # Create your views here.
+from django.shortcuts import render
+
 
 def home(request):
+    return render(request, 'base/home.html')
     # raise ValueError() # <= para simular erro para o Sentry
-    return HttpResponse('<html><body>Ola Django</body></html>', content_type='text/html')
+    # return HttpResponse('<html><body>Ola Django</body></html>', content_type='text/html')
