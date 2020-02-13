@@ -13,7 +13,6 @@ def resp(client):
 def test_status_code(resp):
     assert resp.status_code == 200
 
-
 def test_titulo_video(resp):
     assert_contains(resp, 'Video Aperitivo: Motivação')
 
