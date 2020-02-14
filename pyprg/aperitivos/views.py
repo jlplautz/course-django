@@ -1,4 +1,5 @@
 from django.shortcuts import render
+from django.urls import reverse
 
 
 class Video:
@@ -7,11 +8,15 @@ class Video:
         self.titulo = titulo
         self.vimeo_id = vimeo_id
 
+    def get_absolute_url(self):
+        return reverse('aperitivos:video', args=(self.slug,))
+
 
 videos = [
     Video('motivacao', 'Video Aperitivo: Motivação', 386792293),
     Video('instalacao-windows', 'Instalação Windows', 387145176),
 ]
+
 
 videos_dct = {v.slug: v for v in videos}
 
