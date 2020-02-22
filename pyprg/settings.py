@@ -52,6 +52,8 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'pyprg.base',
     'pyprg.aperitivos',
+    'pyprg.modulos',
+    'ordered_model',
 ]
 
 MIDDLEWARE = [
@@ -77,6 +79,7 @@ TEMPLATES = [
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
+                'pyprg.modulos.context_processors.listar_modulos',
             ],
         },
     },
