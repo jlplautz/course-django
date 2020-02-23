@@ -5,7 +5,6 @@ from ordered_model.models import OrderedModel
 
 class Modulo(OrderedModel):
     titulo = models.CharField(max_length=64)
-    # qual o publico alvo
     publico = models.TextField()
     decricao = models.TextField()
     slug = models.SlugField(unique=True)
