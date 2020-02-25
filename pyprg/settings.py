@@ -54,6 +54,7 @@ INSTALLED_APPS = [
     'pyprg.aperitivos',
     'pyprg.modulos',
     'ordered_model',
+    'django_extensions',
 ]
 
 MIDDLEWARE = [
