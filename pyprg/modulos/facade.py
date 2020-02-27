@@ -1,3 +1,4 @@
+from django.db.models import Prefetch
 from typing import List
 
 from pyprg.modulos.models import Modulo, Aula
@@ -30,4 +31,6 @@ def encontrar_aula(slug):
 
 
 def listar_modulos_com_aulas():
-    return Modulo.objects.order_by('order').all()
+    aulas_ordenadas = Aula.objects.order_by('order')
+    return Modulo.objects.order_by('order').prefetch_related(
+        Prefetch('aula_set', queryset=aulas_ordenadas, to_attr='aulas')).all()
