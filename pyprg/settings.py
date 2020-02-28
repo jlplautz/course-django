@@ -53,6 +53,7 @@ INSTALLED_APPS = [
     'pyprg.base',
     'pyprg.aperitivos',
     'pyprg.modulos',
+    'pyprg.turmas',
     'ordered_model',
     'django_extensions',
 ]

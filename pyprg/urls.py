@@ -23,6 +23,7 @@ urlpatterns = [
     path('', include('pyprg.base.urls')),
     path('aperitivos/', include('pyprg.aperitivos.urls')),
     path('modulos/', include('pyprg.modulos.urls')),
+    path('turmas/', include('pyprg.turmas.urls')),
 ]
 
 
