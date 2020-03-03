@@ -40,6 +40,8 @@ ALLOWED_HOSTS = config('ALLOWED_HOSTS', cast=Csv())
 # qual será a classe base utilizada como usuario
 AUTH_USER_MODEL = 'base.User'
 
+LOGIN_REDIRECT_URL = '/modulos/'
+
 # Application definition
 
 INSTALLED_APPS = [
