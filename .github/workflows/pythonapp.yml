@@ -39,9 +39,3 @@ jobs:
     - name: Test with pytest
       run: |
         pipenv run pytest pyprg --cov=pyprg
-
-    - name: Posting Coverage
-      env:
-        CODECOV_TOKEN: "7a84e084-54bd-408f-9dce-f5eec8ec70d5"
-      run: |
-        pipenv run codecov
